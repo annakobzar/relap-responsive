@@ -1,0 +1,16 @@
+.button {
+  width: 170px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ffc300;
+  border-radius: 25px;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 20px;
+
+  &--transparent {
+    display: none;
+  }
+}
