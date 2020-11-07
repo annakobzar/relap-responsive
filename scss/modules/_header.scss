@@ -1,6 +1,7 @@
 .header {
   background: url(../images/header_bg-mobile.jpg) no-repeat bottom center;
   background-size: cover;
+  overflow-x: hidden;
 
   &__wrap {
     height: 100vh;
@@ -17,6 +18,7 @@
     background: #fff;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 0 20px #c86dd7;
   }
 
   &__title {
@@ -33,5 +35,12 @@
     line-height: 24px;
     color: #fff;
     margin: 30px 0;
+  }
+
+  &__social {
+    @include pos($l: 50%, $b: 30px);
+
+    justify-content: center;
+    transform: translateX(-50%);
   }
 }

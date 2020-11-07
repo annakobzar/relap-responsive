@@ -1,9 +1,5 @@
 .social {
-  @include pos($l: 50%, $b: 30px);
-
   display: flex;
-  justify-content: center;
-  transform: translateX(-50%);
 
   &__item {
     margin: 5px;
@@ -12,5 +8,9 @@
   &__icon {
     @include size(32px);
     fill: #fff;
+
+    &--purpule {
+      fill: #c86dd7;
+    }
   }
 }
