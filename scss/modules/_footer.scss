@@ -1,0 +1,57 @@
+.footer {
+  background: url(../images/footer_bg-mobile.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100%;
+  padding: 70px 15px 60px;
+
+  &__contact {
+    text-align: center;
+    padding-bottom: 65px;
+    position: relative;
+
+    &::after {
+      @include size(100vw, 1px);
+      @include pos($b: 0, $l: -15px);
+
+      content: "";
+      background-color: #dadada;
+    }
+  }
+
+  &__text {
+    margin: 35px 0;
+  }
+
+  &__wrap {
+    padding: 60px 0 0;
+  }
+
+  &__menu {
+    margin-bottom: 40px;
+  }
+
+  &__menu-title {
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #333333;
+    opacity: 0.5;
+  }
+
+  &__social {
+    margin: 20px 0 15px;
+  }
+
+  &__rights {
+    color: #333333;
+    opacity: 0.5;
+  }
+}
