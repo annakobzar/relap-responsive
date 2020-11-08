@@ -438,7 +438,7 @@ body {
   position: absolute;
   width: 340px;
   height: 270px;
-  background-image: url("/images/home/Bitmap.jpg");
+  background-image: url(../images/home/Bitmap.jpg);
   left: 15px;
   bottom: 16px;
 }
@@ -624,14 +624,112 @@ body {
 }
 
 .gallery__img1 {
-  background: url("/images/features/Bitmap1.jpg");
+  background: url(../images/features/Bitmap1.jpg);
 }
 
 .gallery__img2 {
-  background: url("/images/features/Bitmap2.jpg");
+  background: url(../images/features/Bitmap2.jpg);
 }
 
 .gallery__img3 {
-  background: url("/images/features/Bitmap3.jpg");
+  background: url(../images/features/Bitmap3.jpg);
+}
+
+.news {
+  background: #FDF2FF;
+  color: #333;
+}
+
+.news__uptitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding-top: 45px;
+  margin-bottom: 17px;
+}
+
+.news__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+.news__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.news__btn {
+  margin-bottom: 50px;
+}
+
+.news__btn .link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.news .box {
+  position: relative;
+  width: 340px;
+  height: 330px;
+  background: linear-gradient(225deg, #3023ae 0%, #c86dd7 100%);
+  margin-bottom: 50px;
+}
+
+.news .wraper {
+  position: absolute;
+  width: 340px;
+  height: 330px;
+  background-image: url(../images/news/img.jpg);
+  background-size: cover;
+  left: 20px;
+  bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.news .wraper__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  padding-top: 100px;
+  margin-bottom: 10px;
+}
+
+.news .wraper__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.news .wraper__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .wraper__info img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.news .wraper__info .name {
+  color: #fff;
 }
 /*# sourceMappingURL=styles.min.css.map */
