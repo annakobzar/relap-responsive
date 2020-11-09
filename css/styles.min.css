@@ -638,6 +638,7 @@ body {
 .news {
   background: #FDF2FF;
   color: #333;
+  padding-bottom: 50px;
 }
 
 .news__uptitle {
@@ -680,7 +681,6 @@ body {
   width: 340px;
   height: 330px;
   background: linear-gradient(225deg, #3023ae 0%, #c86dd7 100%);
-  margin-bottom: 50px;
 }
 
 .news .wraper {
