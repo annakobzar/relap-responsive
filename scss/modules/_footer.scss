@@ -1,8 +1,10 @@
 .footer {
-  background: url(../images/footer_bg-mobile.jpg) no-repeat center center;
+  background: url(../images/footer_bg-mobile.jpg);
   background-size: cover;
-  min-height: 100%;
-  padding: 70px 15px 60px;
+
+  &__wrap {
+    padding: 70px 0 60px;
+  }
 
   &__contact {
     text-align: center;
@@ -22,8 +24,8 @@
     margin: 35px 0;
   }
 
-  &__wrap {
-    padding: 60px 0 0;
+  &__menus {
+    padding-top: 60px;
   }
 
   &__menu {
