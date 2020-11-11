@@ -224,6 +224,11 @@ body {
 .title {
   font: 700 40px "Poppins", sans-serif;
   color: #333333;
+  margin-bottom: 15px;
+}
+
+.title--white {
+  color: #fff;
 }
 
 .text {
@@ -231,6 +236,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #333333;
+}
+
+.text--white {
+  color: #fff;
 }
 
 .form__field {
@@ -342,10 +351,12 @@ body {
 }
 
 .footer {
-  background: url(../images/footer_bg-mobile.jpg) no-repeat center center;
+  background: url(../images/footer_bg-mobile.jpg);
   background-size: cover;
-  min-height: 100%;
-  padding: 70px 15px 60px;
+}
+
+.footer__wrap {
+  padding: 70px 0 60px;
 }
 
 .footer__contact {
@@ -368,8 +379,8 @@ body {
   margin: 35px 0;
 }
 
-.footer__wrap {
-  padding: 60px 0 0;
+.footer__menus {
+  padding-top: 60px;
 }
 
 .footer__menu {
@@ -805,5 +816,93 @@ body {
 .people .logos__item {
   width: 50%;
   margin-bottom: 45px;
+}
+
+.works {
+  padding: 40px 0 10px;
+  text-align: center;
+  position: relative;
+}
+
+.works::after {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: -4.5%;
+  z-index: 3;
+  content: "";
+  background: url(../images/about/about_oval_01.png) no-repeat;
+}
+
+.works__block {
+  margin-top: 60px;
+}
+
+.works__item {
+  margin-bottom: 55px;
+}
+
+.works__img {
+  margin-bottom: 15px;
+}
+
+.works__title {
+  font: 700 24px "Poppins", sans-serif;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.works__info {
+  color: #333333;
+  opacity: 0.5;
+}
+
+.about {
+  position: relative;
+  z-index: 2;
+  background-color: #3023ae;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about::before {
+  width: 204px;
+  height: 323px;
+  position: absolute;
+  bottom: -23%;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: url(../images/about/about_oval_02.png) no-repeat;
+}
+
+.about::after {
+  width: 70px;
+  height: 140px;
+  position: absolute;
+  right: 0;
+  bottom: -12%;
+  z-index: -1;
+  content: "";
+  background: url(../images/about/about_oval_03.png) no-repeat;
+}
+
+.about__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 90px 0 80px;
+}
+
+.about__subtitle {
+  font: 700 16px "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about__button {
+  margin-top: 30px;
 }
 /*# sourceMappingURL=styles.min.css.map */
