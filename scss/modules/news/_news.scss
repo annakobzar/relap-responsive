@@ -94,3 +94,37 @@
     }
 
 }
+
+
+@media(min-width:500px) {
+    .news{
+        .block_title{
+            max-width: 40%;
+            margin-right: 100px;
+        }
+        .block_box{
+            max-width: 60%;
+        }
+        .box, .wraper{
+            width: 570px;
+            height: 545px;
+        }
+        .news__container{
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+
+        .wraper{
+            &__title {
+                padding-top: 340px;
+                
+            }
+        }
+    }
+
+    
+
+    
+}

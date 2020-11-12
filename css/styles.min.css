@@ -550,6 +550,10 @@ body {
   color: #333;
 }
 
+.home__container {
+  overflow: hidden;
+}
+
 .home__uptitle {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -584,8 +588,9 @@ body {
   width: 340px;
   height: 270px;
   background-image: url(../images/home/Bitmap.jpg);
-  left: 15px;
+  position: absolute;
   bottom: 16px;
+  left: 15px;
 }
 
 .home .wraper .oval {
@@ -615,15 +620,78 @@ body {
   margin: auto;
 }
 
+@media (min-width: 500px) {
+  .home__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home__uptitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .home__title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .home .block_title {
+    max-width: 50%;
+    margin-right: 85px;
+  }
+  .home .block_box {
+    max-width: 50%;
+    margin-left: 50px;
+  }
+  .home .box {
+    width: 705px;
+    height: 545px;
+    float: none;
+  }
+  .home .wraper {
+    width: 670px;
+    height: 545px;
+  }
+  .home .wraper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 32px;
+    left: 35px;
+  }
+  .home .wraper .oval {
+    width: 116px;
+    height: 116px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .home .wraper .triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid #C86DD7;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 6px;
+  }
+}
+
 .section {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  overflow: hidden;
 }
 
-.section .totam__text, .section .eaque__text, .section .inventore__text {
+.section .totam__text,
+.section .eaque__text,
+.section .inventore__text {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -651,7 +719,7 @@ body {
 }
 
 .section .subsection::after {
-  content: url("/images/icons/arrow_down.svg");
+  content: url(../images/icons/arrow_down.svg);
   margin-left: 8px;
 }
 
@@ -680,12 +748,22 @@ body {
   z-index: -1;
 }
 
+@media (min-width: 500px) {
+  .section__eaque, .section__totam {
+    margin-bottom: 40px;
+  }
+  .section__inventore {
+    margin-bottom: 190px;
+  }
+}
+
 .features {
   background-color: #FDF2FF;
   color: #333;
 }
 
 .features__uptitle {
+  padding-top: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -721,6 +799,26 @@ body {
   color: #fff;
 }
 
+@media (min-width: 500px) {
+  .features .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .features .wrap_title {
+    max-width: 40%;
+    display: block;
+  }
+  .features .wrap_text {
+    max-width: 60%;
+  }
+  .features__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .choose {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -751,7 +849,7 @@ body {
 }
 
 .choose .item .link:active {
-  opacity: 1.2;
+  opacity: 1;
   font-weight: 600;
 }
 
@@ -778,6 +876,17 @@ body {
 
 .gallery__img3 {
   background: url(../images/features/Bitmap3.jpg);
+}
+
+@media (min-width: 500px) {
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .gallery .img:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .news {
@@ -878,6 +987,32 @@ body {
   color: #fff;
 }
 
+@media (min-width: 500px) {
+  .news .block_title {
+    max-width: 40%;
+    margin-right: 100px;
+  }
+  .news .block_box {
+    max-width: 60%;
+  }
+  .news .box, .news .wraper {
+    width: 570px;
+    height: 545px;
+  }
+  .news .news__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 100px;
+  }
+  .news .wraper__title {
+    padding-top: 340px;
+  }
+}
+
 .people {
   background-color: #fff;
   text-align: center;
@@ -949,6 +1084,32 @@ body {
 .people .logos__item {
   width: 50%;
   margin-bottom: 45px;
+}
+
+@media (min-width: 500px) {
+  .people .title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .people .text {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+  .people .blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .people .blocks .block:not(:last-child) {
+    margin-right: 30px;
+  }
+  .people .logos__item {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .works {

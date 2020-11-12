@@ -19,6 +19,14 @@
     }
     margin-bottom: 35px;
 
+}
 
-
+//DESKTOP
+@media(min-width:500px){
+.gallery{
+    display: flex;
+    .img:not(:last-child){
+        margin-right: 30px;
+    }
+}
 }
