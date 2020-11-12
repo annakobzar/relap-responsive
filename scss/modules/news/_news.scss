@@ -1,6 +1,7 @@
 .news {
     background: #FDF2FF;
     color: #333;
+    padding-bottom: 50px;
 
     &__uptitle {
         font-family: $font-title;
@@ -43,9 +44,6 @@
         width: 340px;
         height: 330px;
         background: linear-gradient(225deg, rgba(48, 35, 174, 1) 0%, rgba(200, 109, 215, 1) 100%);
-        margin-bottom: 50px;
-
-
     }
 
     .wraper {

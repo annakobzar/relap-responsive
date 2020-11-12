@@ -26,6 +26,7 @@
         "../scss/modules/features/_choose.scss",
         "../scss/modules/features/_gallery.scss",
         "../scss/modules/news/_news.scss",
+        "../scss/modules/people/_people.scss",
         "../scss/modules/_works.scss",
         "../scss/modules/_about.scss"
     ],
