@@ -8,9 +8,15 @@
   &__icon {
     @include size(32px);
     fill: #fff;
+    transition: all 0.3s;
 
     &--purpule {
-      fill: #c86dd7;
+      fill: var(--purpule);
+    }
+
+    &:hover {
+      fill: var(--orange);
+      transform: scale(1.1);
     }
   }
 }
