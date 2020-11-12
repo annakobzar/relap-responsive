@@ -38,7 +38,7 @@
       @include pos($l: 0);
 
       content: "";
-      background: #c86dd7;
+      background: var(--purpule);
       transition: all 0.2s;
     }
 
@@ -55,21 +55,7 @@
     @include size(100%, 2px);
     @include pos($l: 0, $t: 46%);
 
-    background: #c86dd7;
-  }
-
-  &__list {
-    @include size(190px, 50%);
-    @include pos(fixed, $t: 65px, $r: -190px);
-
-    background-color: #fff;
-    opacity: 0.8;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    transition: all 0.3s;
+    background: var(--purpule);
   }
 
   &__link {
@@ -77,5 +63,68 @@
     font-size: 20px;
     font-weight: 600;
     color: #333333;
+  }
+}
+
+// mobile
+@media (max-width: $mobile) {
+  .menu {
+    &__list {
+      @include size(190px, 50%);
+      @include pos(fixed, $t: 65px, $r: -190px);
+
+      background-color: #fff;
+      opacity: 0.8;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}
+
+// desktop
+@media (min-width: $mobile) {
+  .menu {
+    &__label {
+      display: none;
+    }
+
+    &__list {
+      @include size(415px, 100%);
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link {
+      color: #fff;
+      position: relative;
+      transition: all 0.3s;
+
+      &::after {
+        @include size(0, 2px);
+        @include align(false, true, absolute);
+
+        content: "";
+        background-color: var(--orange);
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        color: var(--orange);
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
 }

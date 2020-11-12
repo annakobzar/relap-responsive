@@ -1,6 +1,15 @@
 .footer {
   background: url(../images/footer_bg-mobile.jpg);
   background-size: cover;
+  position: relative;
+
+  &::after {
+    @include size(100%, 1px);
+    @include pos($t: 42%, $l: 0);
+
+    content: "";
+    background-color: #dadada;
+  }
 
   &__wrap {
     padding: 70px 0 60px;
@@ -10,14 +19,6 @@
     text-align: center;
     padding-bottom: 65px;
     position: relative;
-
-    &::after {
-      @include size(100vw, 1px);
-      @include pos($b: 0, $l: -15px);
-
-      content: "";
-      background-color: #dadada;
-    }
   }
 
   &__text {
