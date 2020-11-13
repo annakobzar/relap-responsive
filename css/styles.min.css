@@ -129,7 +129,7 @@ body {
   color: #fff;
   text-decoration: none;
   background-color: var(--orange);
-  border: 1px solid inherit;
+  border: 1px solid var(--orange);
   border-radius: 25px;
   text-align: center;
   display: inline-block;
@@ -143,6 +143,7 @@ body {
 
 .button--purpule {
   background-color: var(--purpule);
+  border: 1px solid var(--purpule);
 }
 
 @media (min-width: 376px) {
@@ -491,7 +492,7 @@ body {
     height: 145px;
     font-size: 72px;
     line-height: 72px;
-    margin-top: 12%;
+    margin-top: 12vh;
   }
   .header__info {
     width: 40%;
@@ -576,7 +577,8 @@ body {
   }
   .footer::after {
     position: absolute;
-    top: 75vh;
+    top: auto;
+    bottom: 35%;
     left: 0;
   }
   .footer__wrap {
@@ -606,6 +608,10 @@ body {
   }
   .footer__menu {
     margin-bottom: 0;
+  }
+  .footer__link:hover {
+    color: var(--purpule);
+    font-weight: 500;
   }
 }
 
@@ -1203,17 +1209,70 @@ body {
 
 .works__img {
   margin-bottom: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .works__title {
   font: 700 24px "Poppins", sans-serif;
   color: #333333;
   margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.works__title::after {
+  width: 0;
+  height: 8px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  content: "";
+  z-index: -1;
+  background-color: var(--purpule);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .works__info {
   color: #333333;
   opacity: 0.5;
+}
+
+@media (min-width: 376px) {
+  .works {
+    padding-bottom: 45px;
+  }
+  .works::after {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 65%;
+    bottom: -11.5%;
+    z-index: 3;
+    content: "";
+    background: url(../images/about/about_oval_01-desktop.png) no-repeat;
+  }
+  .works__text {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .works__block {
+    margin-top: 0;
+  }
+  .works__item {
+    cursor: pointer;
+    padding: 35px;
+    margin-bottom: 0;
+  }
+  .works__item:hover {
+    -webkit-box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.0994678);
+            box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.0994678);
+  }
+  .works__item:hover .works__title::after {
+    width: 100%;
+    height: 8px;
+  }
 }
 
 .about {
@@ -1247,11 +1306,8 @@ body {
 }
 
 .about__wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2;
   padding: 90px 0 80px;
+  z-index: 2;
 }
 
 .about__subtitle {
@@ -1262,5 +1318,30 @@ body {
 
 .about__button {
   margin-top: 30px;
+}
+
+@media (min-width: 376px) {
+  .about {
+    position: relative;
+    padding: 100px 0;
+  }
+  .about::before {
+    position: absolute;
+    bottom: -125px;
+    left: 0;
+    z-index: -1;
+  }
+  .about::after {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 47%;
+    bottom: -85px;
+    z-index: -1;
+    background: url(../images/about/about_oval_03-desktop.png) no-repeat;
+  }
+  .about__wrap {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=styles.min.css.map */

@@ -68,7 +68,7 @@
     min-height: 100vh;
 
     &::after {
-      @include pos($t: 75vh, $l: 0);
+      @include pos($t: auto, $l: 0, $b: 35%);
     }
 
     &__wrap {
@@ -96,6 +96,13 @@
 
     &__menu {
       margin-bottom: 0;
+    }
+
+    &__link {
+      &:hover {
+        color: var(--purpule);
+        font-weight: 500;
+      }
     }
   }
 }
