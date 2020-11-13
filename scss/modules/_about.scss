@@ -21,10 +21,8 @@
   }
 
   &__wrap {
-    @include size(100%);
-    @include pos(relative, $z: 2);
-
     padding: 90px 0 80px;
+    z-index: 2;
   }
 
   &__subtitle {
@@ -35,5 +33,30 @@
 
   &__button {
     margin-top: 30px;
+  }
+}
+
+// desktop
+@media (min-width: $mobile) {
+  .about {
+    // min-height: 100vh;
+    position: relative;
+    padding: 100px 0;
+
+    &::before {
+      @include pos($b: -125px, $l: 0, $z: -1);
+    }
+
+    &::after {
+      @include size(140px);
+      @include pos($b: -85px, $r: 47%, $z: -1);
+
+      // content: "";
+      background: url(../images/about/about_oval_03-desktop.png) no-repeat;
+    }
+
+    &__wrap {
+      padding: 0;
+    }
   }
 }
