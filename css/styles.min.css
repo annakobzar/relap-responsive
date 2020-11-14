@@ -687,6 +687,12 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .section .totam__text,
@@ -733,7 +739,7 @@ body {
 }
 
 .section .input:checked + .label .subsection::after {
-  content: url("/images/icons/arrow_up.svg");
+  content: url(../images/icons/arrow_up.svg);
   margin-left: 8px;
 }
 
@@ -828,8 +834,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .choose .item {
