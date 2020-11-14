@@ -17,7 +17,7 @@
 
   &__contact {
     text-align: center;
-    padding-bottom: 65px;
+    margin-bottom: 65px;
     position: relative;
   }
 
@@ -56,5 +56,53 @@
   &__rights {
     color: #333333;
     opacity: 0.5;
+  }
+}
+
+// desktop
+@media (min-width: $mobile) {
+  .footer {
+    background: url(../images/footer_bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    padding-bottom: 1px;
+    min-height: 100vh;
+
+    &::after {
+      @include pos($t: auto, $l: 0, $b: 35%);
+    }
+
+    &__wrap {
+      padding-top: 10%;
+      padding-bottom: 0;
+    }
+
+    &__contact {
+      margin-bottom: 35vh;
+    }
+
+    &__text {
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__menus {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0;
+      margin-bottom: 5vh;
+    }
+
+    &__menu {
+      margin-bottom: 0;
+    }
+
+    &__link {
+      &:hover {
+        color: var(--purpule);
+        font-weight: 500;
+      }
+    }
   }
 }

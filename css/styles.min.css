@@ -100,7 +100,7 @@ body {
 }
 
 .social__item {
-  margin: 5px;
+  margin-right: 10px;
 }
 
 .social__icon {
@@ -129,7 +129,7 @@ body {
   color: #fff;
   text-decoration: none;
   background-color: var(--orange);
-  border: 1px solid inherit;
+  border: 1px solid var(--orange);
   border-radius: 25px;
   text-align: center;
   display: inline-block;
@@ -143,6 +143,7 @@ body {
 
 .button--purpule {
   background-color: var(--purpule);
+  border: 1px solid var(--purpule);
 }
 
 @media (min-width: 376px) {
@@ -307,6 +308,12 @@ body {
   color: #fff;
 }
 
+@media (min-width: 376px) {
+  .title {
+    font-size: 56px;
+  }
+}
+
 .text {
   font-weight: 600;
   font-size: 16px;
@@ -361,6 +368,22 @@ body {
   font-size: 16px;
   color: #333333;
   opacity: 0.5;
+}
+
+@media (min-width: 376px) {
+  .form {
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .form__field {
+    width: 65%;
+  }
 }
 
 .header {
@@ -469,7 +492,7 @@ body {
     height: 145px;
     font-size: 72px;
     line-height: 72px;
-    margin-top: 12%;
+    margin-top: 12vh;
   }
   .header__info {
     width: 40%;
@@ -504,7 +527,7 @@ body {
 
 .footer__contact {
   text-align: center;
-  padding-bottom: 65px;
+  margin-bottom: 65px;
   position: relative;
 }
 
@@ -543,6 +566,53 @@ body {
 .footer__rights {
   color: #333333;
   opacity: 0.5;
+}
+
+@media (min-width: 376px) {
+  .footer {
+    background: url(../images/footer_bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    padding-bottom: 1px;
+    min-height: 100vh;
+  }
+  .footer::after {
+    position: absolute;
+    top: auto;
+    bottom: 35%;
+    left: 0;
+  }
+  .footer__wrap {
+    padding-top: 10%;
+    padding-bottom: 0;
+  }
+  .footer__contact {
+    margin-bottom: 35vh;
+  }
+  .footer__text {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .footer__menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0;
+    margin-bottom: 5vh;
+  }
+  .footer__menu {
+    margin-bottom: 0;
+  }
+  .footer__link:hover {
+    color: var(--purpule);
+    font-weight: 500;
+  }
 }
 
 .home {
@@ -1145,17 +1215,70 @@ body {
 
 .works__img {
   margin-bottom: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .works__title {
   font: 700 24px "Poppins", sans-serif;
   color: #333333;
   margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.works__title::after {
+  width: 0;
+  height: 8px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  content: "";
+  z-index: -1;
+  background-color: var(--purpule);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .works__info {
   color: #333333;
   opacity: 0.5;
+}
+
+@media (min-width: 376px) {
+  .works {
+    padding-bottom: 45px;
+  }
+  .works::after {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 65%;
+    bottom: -11.5%;
+    z-index: 3;
+    content: "";
+    background: url(../images/about/about_oval_01-desktop.png) no-repeat;
+  }
+  .works__text {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .works__block {
+    margin-top: 0;
+  }
+  .works__item {
+    cursor: pointer;
+    padding: 35px;
+    margin-bottom: 0;
+  }
+  .works__item:hover {
+    -webkit-box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.0994678);
+            box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.0994678);
+  }
+  .works__item:hover .works__title::after {
+    width: 100%;
+    height: 8px;
+  }
 }
 
 .about {
@@ -1189,11 +1312,8 @@ body {
 }
 
 .about__wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2;
   padding: 90px 0 80px;
+  z-index: 2;
 }
 
 .about__subtitle {
@@ -1204,5 +1324,30 @@ body {
 
 .about__button {
   margin-top: 30px;
+}
+
+@media (min-width: 376px) {
+  .about {
+    position: relative;
+    padding: 100px 0;
+  }
+  .about::before {
+    position: absolute;
+    bottom: -125px;
+    left: 0;
+    z-index: -1;
+  }
+  .about::after {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 47%;
+    bottom: -85px;
+    z-index: -1;
+    background: url(../images/about/about_oval_03-desktop.png) no-repeat;
+  }
+  .about__wrap {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=styles.min.css.map */
