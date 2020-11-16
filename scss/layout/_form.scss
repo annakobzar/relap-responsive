@@ -23,3 +23,17 @@
     }
   }
 }
+
+// desktop
+@media (min-width: $mobile) {
+  .form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    &__field {
+      width: 65%;
+    }
+  }
+}

@@ -6,7 +6,7 @@
   color: #fff;
   text-decoration: none;
   background-color: var(--orange);
-  border: 1px solid inherit;
+  border: 1px solid var(--orange);
   border-radius: 25px;
   text-align: center;
   display: inline-block;
@@ -19,6 +19,7 @@
 
   &--purpule {
     background-color: var(--purpule);
+    border: 1px solid var(--purpule);
   }
 }
 
